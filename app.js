@@ -1,7 +1,3 @@
-/* =========================================
-   AgriOuémé — app.js
-   ========================================= */
-
 'use strict';
 
 /* ---- DONNÉES CÉRÉALES ---- */
@@ -174,19 +170,38 @@ function initBurger() {
   const navMenu = document.getElementById('navMenu');
   if (!burger || !navMenu) return;
 
-  burger.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    burger.classList.toggle('active', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+  function openMenu() {
+    navMenu.classList.add('open');
+    burger.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    burger.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   // Ferme au clic sur un lien
   navMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      burger.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+    a.addEventListener('click', closeMenu);
+  });
+
+  // Ferme si clic en dehors du menu
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && e.target !== burger) {
+      closeMenu();
+    }
+  });
+
+  // Ferme avec la touche Échap
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) closeMenu();
   });
 }
 
