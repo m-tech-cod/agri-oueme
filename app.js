@@ -9,7 +9,7 @@ const cerealsData = [
     badge: "Disponible",
     img: "https://images.pexels.com/photos/547264/pexels-photo-547264.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Sacs de maïs jaune",
-    whatsapp: "2290162697666",
+    whatsapp: "2290159471741",
     productName: "Maïs jaune grain"
   },
   {
@@ -19,7 +19,7 @@ const cerealsData = [
     badge: "Populaire",
     img: "https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Riz local étuvé",
-    whatsapp: "2290162697666",
+    whatsapp: "2290159471741",
     productName: "Riz local étuvé Ouémé"
   },
   {
@@ -29,7 +29,7 @@ const cerealsData = [
     badge: "Stock limité",
     img: "https://images.pexels.com/photos/326082/pexels-photo-326082.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Sorgho rouge",
-    whatsapp: "2290162697666",
+    whatsapp: "2290159471741",
     productName: "Sorgho rouge"
   },
   {
@@ -39,7 +39,7 @@ const cerealsData = [
     badge: "Disponible",
     img: "https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Champ de céréales",
-    whatsapp: "2290162697666",
+    whatsapp: "2290159471741",
     productName: "Petit Mil"
   },
   {
@@ -49,7 +49,7 @@ const cerealsData = [
     badge: "Premium",
     img: "https://images.pexels.com/photos/618491/pexels-photo-618491.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Grains de fonio",
-    whatsapp: "2290162697666",
+    whatsapp: "2290159471741",
     productName: "Fonio décortiqué"
   }
 ];
