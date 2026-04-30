@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr-BJ">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AgriOuémé | Céréales de l'Ouémé en direct producteur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Agri<span>Ouémé</span></a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero">Accueil</a>
+        <a href="#cereales">Céréales</a>
+        <a href="#marche">Marché</a>
+        <a href="#vendre">Vendre</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-poster" id="scrollToFormBtn">🌽 Poster ma récolte</button>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        alt="Champs de céréales Bénin"
+        class="hero-bg-img"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge animate-fade-up">🌾 Direc­te­ment du pro­duc­teur</div>
+      <h1 class="animate-fade-up delay-1">
+        Les céréales de <em>l'Ouémé</em>,<br>sans intermédiaire
+      </h1>
+      <p class="hero-sub animate-fade-up delay-2">
+        Maïs, Riz, Sorgho, Mil, Fonio. Des champs de Bonou jusqu'à votre table.<br>
+        Achetez en gros directement aux producteurs de l'Ouémé.
+      </p>
+      <div class="hero-btns animate-fade-up delay-3">
+        <button class="btn-primary" id="heroProducteurBtn">Je suis producteur</button>
+        <button class="btn-ghost" id="heroAcheteurBtn">J'achète en gros</button>
+      </div>
+      <div class="hero-stats animate-fade-up delay-4">
+        <div class="stat"><strong>8</strong><span>Communes</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>5</strong><span>Céréales</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>100%</strong><span>Local Ouémé</span></div>
+      </div>
+    </div>
+    <a href="#cereales" class="scroll-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- ===== AVANTAGES BANDE ===== -->
+  <div class="avantages-band">
+    <div class="container avantages-inner">
+      <div class="avantage-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Producteurs vérifiés</span>
+      </div>
+      <div class="avantage-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Publication en quelques minutes</span>
+      </div>
+      <div class="avantage-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.55a16 16 0 006.54 6.54l1.62-1.62a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>Contact direct WhatsApp</span>
+      </div>
+      <div class="avantage-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1zM16 8l5 5-5 5V8z"/></svg>
+        <span>Livraison Ouando & Dantokpa</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION CÉRÉALES ===== -->
+  <section class="section-cereales" id="cereales">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Nos produits</div>
+        <h2>🌾 Céréales de l'Ouémé</h2>
+        <p>Sélection de céréales cultivées dans les terres fertiles de la vallée de l'Ouémé</p>
+      </div>
+      <div class="cards-grid" id="cerealesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== COMMENT ÇA MARCHE ===== -->
+  <section class="section-steps">
+    <div class="container">
+      <div class="section-header light">
+        <div class="section-tag alt">Processus</div>
+        <h2>Comment ça marche</h2>
+        <p>Simple, rapide, direct</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">📸</div>
+          <h3>Producteur poste</h3>
+          <p>Photo + Prix + Commune de l'Ouémé. Annonce en ligne en moins de 2 minutes.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">💬</div>
+          <h3>Acheteur contacte</h3>
+          <p>Un clic sur WhatsApp, négociation directe avec le producteur, sans commission.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">🚚</div>
+          <h3>Livraison arrangée</h3>
+          <p>Arrangement à Ouando, Dantokpa ou livraison sur place selon accord.</p>
+        </div>
+      </div>
+
+      <div class="steps-image-wrap">
+        <img
+          src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Marché agricole Bénin"
+          loading="lazy"
+        />
+        <div class="steps-image-overlay">
+          <blockquote>"De nos champs directement à votre cuisine, sans détour."</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION POSTER MA RÉCOLTE ===== -->
+  <section class="section-form" id="vendre">
+    <div class="container form-layout">
+      <div class="form-image-col">
+        <img
+          src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Agriculteur souriant téléphone"
+          loading="lazy"
+          class="form-img"
+        />
+        <div class="form-image-caption">
+          <strong>+150 producteurs</strong> font déjà confiance à AgriOuémé
+        </div>
+      </div>
+
+      <div class="form-content-col">
+        <div class="section-tag">Producteur</div>
+        <h2>🌽 Poster ma récolte</h2>
+        <p class="form-intro">Publiez votre annonce gratuitement et recevez des acheteurs directement sur WhatsApp.</p>
+
+        <form id="postHarvestForm" class="harvest-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cerealType">Type de céréale</label>
+              <select id="cerealType" required>
+                <option value="">— Choisir —</option>
+                <option value="Maïs jaune grain">Maïs jaune grain</option>
+                <option value="Riz local étuvé Ouémé">Riz local étuvé Ouémé</option>
+                <option value="Sorgho rouge">Sorgho rouge</option>
+                <option value="Petit Mil">Petit Mil</option>
+                <option value="Fonio décortiqué">Fonio décortiqué</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="commune">Commune</label>
+              <select id="commune" required>
+                <option value="">— Choisir —</option>
+                <option>Bonou</option>
+                <option>Adjohoun</option>
+                <option>Dangbo</option>
+                <option>Akpro-Missérété</option>
+                <option>Avrankou</option>
+                <option>Adjarra</option>
+                <option>Porto-Novo</option>
+                <option>Sèmè-Kpodji</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantity">Quantité (sacs 100kg)</label>
+              <input type="number" id="quantity" required min="1" placeholder="Ex: 5" />
+            </div>
+            <div class="form-group">
+              <label for="pricePerBag">Prix / sac (FCFA)</label>
+              <input type="number" id="pricePerBag" required placeholder="Ex: 18 000" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="whatsappPhone">N° WhatsApp</label>
+            <input type="tel" id="whatsappPhone" required placeholder="Ex: 229XXXXXXXXX" />
+          </div>
+
+          <div class="form-group">
+            <label for="photoUrl">Lien photo (optionnel)</label>
+            <input type="text" id="photoUrl" placeholder="https://..." />
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            Publier mon annonce
+          </button>
+          <div id="formFeedback" class="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIX MARCHÉ OUANDO ===== -->
+  <section class="section-prix" id="marche">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Référence</div>
+        <h2>📊 Prix du marché Ouando</h2>
+        <p>Cours indicatifs — Relevés du 29 avril 2026</p>
+      </div>
+      <div class="prix-cards">
+        <div class="prix-card">
+          <div class="prix-emoji">🌽</div>
+          <div class="prix-info">
+            <h4>Maïs jaune grain</h4>
+            <span class="prix-lieu">Bonou · Adjohoun</span>
+          </div>
+          <div class="prix-amount">18 000 <small>FCFA/sac</small></div>
+          <div class="prix-trend up">↑ Stable</div>
+        </div>
+        <div class="prix-card featured">
+          <div class="prix-emoji">🍚</div>
+          <div class="prix-info">
+            <h4>Riz local étuvé</h4>
+            <span class="prix-lieu">Dangbo · Adjohoun</span>
+          </div>
+          <div class="prix-amount">45 000 <small>FCFA/sac</small></div>
+          <div class="prix-trend up">↑ Hausse</div>
+        </div>
+        <div class="prix-card">
+          <div class="prix-emoji">🌾</div>
+          <div class="prix-info">
+            <h4>Sorgho rouge</h4>
+            <span class="prix-lieu">Akpro-Missérété</span>
+          </div>
+          <div class="prix-amount">20 000 <small>FCFA/sac</small></div>
+          <div class="prix-trend">→ Stable</div>
+        </div>
+        <div class="prix-card">
+          <div class="prix-emoji">🌱</div>
+          <div class="prix-info">
+            <h4>Petit Mil</h4>
+            <span class="prix-lieu">Avrankou · Adjarra</span>
+          </div>
+          <div class="prix-amount">25 000 <small>FCFA/sac</small></div>
+          <div class="prix-trend">→ Stable</div>
+        </div>
+        <div class="prix-card">
+          <div class="prix-emoji">⚪</div>
+          <div class="prix-info">
+            <h4>Fonio décortiqué</h4>
+            <span class="prix-lieu">Adjarra</span>
+          </div>
+          <div class="prix-amount">80 000 <small>FCFA/sac</small></div>
+          <div class="prix-trend up">↑ Premium</div>
+        </div>
+      </div>
+      <p class="prix-note">* Prix indicatifs à titre de référence. Négociation directe avec le producteur recommandée.</p>
+    </div>
+  </section>
+
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section class="section-temoignages">
+    <div class="container">
+      <div class="section-header light">
+        <div class="section-tag alt">Ils nous font confiance</div>
+        <h2>Ce qu'ils disent</h2>
+      </div>
+      <div class="temoignages-grid">
+        <div class="temoignage-card">
+          <div class="stars">★★★★★</div>
+          <p>"Grâce à AgriOuémé, j'ai vendu mes 20 sacs de maïs en 3 jours. L'acheteur est venu directement de Cotonou !"</p>
+          <div class="temoignage-author">
+            <div class="author-avatar" style="background: #c8e6c9;">🧑‍🌾</div>
+            <div>
+              <strong>Koffi A.</strong>
+              <span>Producteur, Bonou</span>
+            </div>
+          </div>
+        </div>
+        <div class="temoignage-card featured-temoignage">
+          <div class="stars">★★★★★</div>
+          <p>"Je commande régulièrement du riz étuvé pour mon restaurant. Les prix sont vrais, sans surprise. Merci AgriOuémé !"</p>
+          <div class="temoignage-author">
+            <div class="author-avatar" style="background: #fff9c4;">👩‍🍳</div>
+            <div>
+              <strong>Mariame D.</strong>
+              <span>Restauratrice, Porto-Novo</span>
+            </div>
+          </div>
+        </div>
+        <div class="temoignage-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Plateforme très pratique. J'ai trouvé du sorgho à bon prix pour ma brasserie. Le contact WhatsApp est immédiat."</p>
+          <div class="temoignage-author">
+            <div class="author-avatar" style="background: #ffe0b2;">🧑‍💼</div>
+            <div>
+              <strong>Théophile M.</strong>
+              <span>Grossiste, Cotonou</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo footer-logo">Agri<span>Ouémé</span></div>
+        <p>Valoriser les céréales de la vallée de l'Ouémé, directement du producteur à l'acheteur.</p>
+        <a href="https://wa.me/2290162697666?text=Bonjour%20AgriOuémé%20!" class="footer-whatsapp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.032 2.016c-5.514 0-9.984 4.47-9.984 9.984 0 1.758.456 3.486 1.32 4.986L2 22.008l5.022-1.32c1.5.87 3.228 1.32 4.986 1.32 5.514 0 9.984-4.47 9.984-9.984S17.546 2.016 12.032 2.016zM12.032 20.016c-1.512 0-2.994-.402-4.266-1.158l-.306-.18-2.982.78.78-2.928-.186-.312c-.828-1.308-1.26-2.814-1.26-4.338 0-4.578 3.726-8.304 8.304-8.304s8.304 3.726 8.304 8.304-3.726 8.304-8.304 8.304zM17.4 14.388c-.27-.138-1.59-.78-1.836-.87-.246-.09-.426-.138-.606.138-.18.27-.69.87-.846 1.05-.156.18-.312.204-.582.066-.27-.138-1.14-.42-2.172-1.338-.804-.714-1.344-1.596-1.5-1.866-.156-.27-.018-.414.114-.546.12-.12.27-.312.402-.468.132-.156.174-.27.27-.45.09-.18.048-.342-.024-.48-.072-.132-.606-1.458-.828-1.998-.222-.54-.444-.456-.606-.462-.156 0-.336-.012-.516-.012-.18 0-.468.066-.714.33-.246.264-.936.912-.936 2.226 0 1.314.954 2.58 1.086 2.76.132.18 1.872 2.862 4.536 4.008.63.276 1.122.438 1.506.558.63.198 1.206.168 1.662.102.504-.066 1.59-.648 1.812-1.278.222-.63.222-1.176.156-1.284-.066-.108-.24-.174-.51-.312z"/></svg>
+          +229 01 62 69 76 66
+        </a>
+      </div>
+      <div class="footer-links">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#cereales">Céréales</a></li>
+          <li><a href="#marche">Marché Ouando</a></li>
+          <li><a href="#vendre">Poster une récolte</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Communes couvertes</h5>
+        <ul>
+          <li>Bonou · Adjohoun · Dangbo</li>
+          <li>Akpro-Missérété · Avrankou</li>
+          <li>Adjarra · Porto-Novo</li>
+          <li>Sèmè-Kpodji</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 AgriOuémé par <strong>Prolife</strong> · Fiers de valoriser les céréales de l'Ouémé</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOUTON WHATSAPP FLOTTANT -->
+  <a href="https://wa.me/2290162697666?text=Bonjour%20AgriOuémé%20!" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12.032 2.016c-5.514 0-9.984 4.47-9.984 9.984 0 1.758.456 3.486 1.32 4.986L2 22.008l5.022-1.32c1.5.87 3.228 1.32 4.986 1.32 5.514 0 9.984-4.47 9.984-9.984S17.546 2.016 12.032 2.016zM12.032 20.016c-1.512 0-2.994-.402-4.266-1.158l-.306-.18-2.982.78.78-2.928-.186-.312c-.828-1.308-1.26-2.814-1.26-4.338 0-4.578 3.726-8.304 8.304-8.304s8.304 3.726 8.304 8.304-3.726 8.304-8.304 8.304zM17.4 14.388c-.27-.138-1.59-.78-1.836-.87-.246-.09-.426-.138-.606.138-.18.27-.69.87-.846 1.05-.156.18-.312.204-.582.066-.27-.138-1.14-.42-2.172-1.338-.804-.714-1.344-1.596-1.5-1.866-.156-.27-.018-.414.114-.546.12-.12.27-.312.402-.468.132-.156.174-.27.27-.45.09-.18.048-.342-.024-.48-.072-.132-.606-1.458-.828-1.998-.222-.54-.444-.456-.606-.462-.156 0-.336-.012-.516-.012-.18 0-.468.066-.714.33-.246.264-.936.912-.936 2.226 0 1.314.954 2.58 1.086 2.76.132.18 1.872 2.862 4.536 4.008.63.276 1.122.438 1.506.558.63.198 1.206.168 1.662.102.504-.066 1.59-.648 1.812-1.278.222-.63.222-1.176.156-1.284-.066-.108-.24-.174-.51-.312z"/></svg>
+    <span>Nous contacter</span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
